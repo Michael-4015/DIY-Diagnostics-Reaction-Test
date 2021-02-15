@@ -85,7 +85,7 @@
      
   }
 			
-  box.onclick=function() {
+  function updateTime() {
      if (numTimes == (numTests - 1)) {
 	 clickCircle();
 	 location.assign("#three");
@@ -96,17 +96,18 @@
 	makeBox();
      }
   }
-let btn = document.getElementById("submit");
-var elements = document.getElementById("chalder");
+
+
 var total = 0;
-btn.onclick = function() {
+function submitRes() {
+    var elements = document.getElementById("chalder");
 	var result = elements.checkValidity();
         submitForm();
         location.assign("#results");
 }
 
-let btn2 = document.getElementById("submit2");
-btn2.onclick = function() {
+
+function submitFeedback() {
 	location.assign("#thanks");
 }
 
