@@ -1,0 +1,332 @@
+
+		body {
+     			background-color: rgb(99, 153, 225);
+			color : white;
+     			margin: 0em;
+		}
+
+		.page {
+    			width: 100vw;
+    			height: 100vh;
+    			position: fixed;
+    			top: 0;
+    			left: -100vw;
+    			overflow: auto;
+    			z-index: 0;
+    			background-color: rgb(99, 153, 225);
+		}
+    
+
+  		.page:target {
+    			left: 0vw;
+    			z-index: 1;
+		}
+		 
+		.dis {
+			font-family: 'Nunito', sans-serif;
+			display : inline-block;
+		}
+		
+		.dis img {
+			height : 30%;
+			width : 30%;
+		}
+			
+			
+		.intro {
+			height: 100%;
+  			width: 50%;
+  			position: fixed;
+  			z-index: 1;
+  			top: 0;
+  			overflow-x: hidden;
+  			padding-top: 20px;
+			font-family: 'Nunito', sans-serif;
+		}
+		.left {
+			left: 0;
+  			background-color: rgb(99, 153, 225);
+			color: white;
+			font-size: 40px;
+			text-align : center;
+			overflow: hidden;
+
+		}
+	
+	
+		.right {
+  			right: 0;
+			color: black; 
+  			background-color: white;
+		}
+		.centered {
+  			position: absolute;
+  			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			font-size: 16px;
+			
+		
+	
+			}
+		.centered img {
+			height : 300%;
+			width : 300%;
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-left: -100%; 
+
+		}
+		.divider{
+   			 width:5px;
+    			height:auto;
+    			display:inline-block;
+		}
+		.card-body {
+			background-color: grey;
+		}
+		#disText {
+			border-radius: 25px;
+  			padding: 20px; 
+  			width: 85%;
+			height: 150px; 
+			background-color: white;
+			color: black;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			margin: 0 auto; 
+			overflow: auto;
+			font-size: 14px;
+		
+		}
+		#insText {
+			border-radius: 25px;
+  			padding: 20px; 
+  			width: 85%;
+			height: 150px; 
+			background-color: white;
+			color: black;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			margin: 0 auto; 
+			overflow:auto;
+			font-size: 14px;
+		}
+  			
+		#box {
+			height: 75px;
+  			width: 75px;
+  			background-color: #FFA500;
+  			border-radius: 50%;
+  			display: inline-block;blue;
+			display: none;
+			position: relative; 
+		}
+		
+		.surveyPage {
+			position: relative;
+			text-align: center; 
+		
+		}
+		
+		.last {
+			border-radius: 25px;
+  			padding: 20px;
+  			width: 85vw;
+			height: 35vw; 
+			background-color: white;
+			color: black;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			display: inline-block;
+			font-family: 'Nunito', sans-serif;
+			overflow: scroll;
+			margin-left:auto;
+    			margin-right:auto;
+   			left: 0; /*NEW*/
+    			right: 0; /*NEW*/
+			clear: both;
+			text-align: left; 
+			
+		}
+		.likert {
+			clear: both;
+			border-radius: 25px;
+  			padding: 20px; 
+  			width: 85vw;
+			height: 10vw; 
+			background-color: white;
+			color: black;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			display: inline-block;
+			font-family: 'Nunito', sans-serif;
+			overflow: scroll;
+			margin-left:auto;
+    			margin-right:auto;
+   			left: 0; /*NEW*/
+    			right: 0; /*NEW*/
+			text-align: left; 
+			margin-top : 30px;
+			
+		}
+		.likert h1 {
+			font-size: 20px;
+		}
+		
+		.likert input[type=radio] {
+    			display: block;
+   			margin-left: 60px;
+    			margin-right: 60px;
+    			margin-bottom: 5px;
+			clear: both;
+		}
+		.likert label {
+			clear: both;
+    			display: inline-block;
+			text-align: center;
+		}
+			
+			
+		#chalder1 {
+			border-radius: 25px;
+  			padding: 20px; 
+  			width: 85%;
+			height: 150px; 
+			background-color: white;
+			color: black;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			margin: 0 auto;
+		}
+			
+		input[type=text] {
+  			padding:10px;
+  			border-radius:10px;
+		}
+			.feedback {
+			
+			background-color: rgb(239,239,239);
+  			position:relative;
+			text-align: center; 
+			
+		}
+		
+		.feedback h1 {
+			background-color: rgb(99, 153, 225);
+			margin-top: 0;
+			padding: 10px;
+			color:black; 
+			height: 10%;
+			
+		}
+		#two {
+			background-color: rgb(239,239,239);
+		}
+			
+	
+		
+		.review {
+			color: rgb(125,123,144);
+	  		border-radius:20px;
+			border: 0;
+			padding: 10px;
+			width: 30%;
+			height: 44vh;
+			resize: none; 
+			outline: none; 
+			font-weight: bold;
+			font-size: 16px;
+			margin: 0 auto;
+			margin-top: 10%;
+			
+		}
+		.sub {
+			clear:both; 
+  			font-family: 'Ubuntu', sans-serif;
+  			width: 170px;
+			height: 40px;
+			line-height: 1;
+			font-size: 18px;
+			font-weight: bold;
+			letter-spacing: 1px;
+			border: 3px rgb(99, 153, 225);
+			background: #fff;
+			color: rgb(99, 153, 225);
+			border-radius: 40px;
+			cursor: pointer;
+			overflow: hidden;
+			transition: all .35s;
+			margin-bottom: 25px;
+		}
+
+		.sub:hover{
+		  	background: rgb(99, 153, 225);
+		  	color: #fff;
+		}
+
+		.sub span{
+		  opacity: 1;
+		  visibility: visible;
+		  transition: all .35s;
+		}
+
+		.success{
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background: #fff;
+		  border-radius: 50%;
+		  z-index: 1;
+		  opacity: 0;
+		  visibility: hidden;
+		  transition: all .35s;
+		}
+
+		.success svg{
+		  width: 20px;
+		  height: 20px;
+		  fill: yellowgreen;
+		  transform-origin: 50% 50%;
+		  transform: translateY(-50%) rotate(0deg) scale(0);
+		  transition: all .35s;
+		}
+
+		.sub.is_active{
+		  width: 40px;
+		  height: 40px;
+		}
+
+		.sub.is_active .success{
+		  opacity: 1;
+		  visibility: visible;
+		}
+
+		.sub.is_active .success svg{
+		  margin-top: 50%;
+		  transform: translateY(-50%) rotate(720deg) scale(1);
+		}
+
+		.sub.is_active span{
+		  opacity: 0;
+		  visibility: hidden;
+		}
+		#beginTest {
+			margin-left: 45%;
+		}
+		
+		#thanks {
+			display: flex;
+			align-items: center;
+			text-align: center;
+			background-color: rgb(99, 153, 225);
+			color: white;
+			font-size: 55px;
+			font-family: 'Nunito', sans-serif;
+		}
+		
+		#thanks p {
+			margin: 0 auto;
+		}
+		#feedback {
+			height: 100%;
+		}
+			

@@ -1,0 +1,313 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<meta charset="utf-8">
+   	
+    	<link rel="stylesheet" href="style.css">
+    	<script type = "text/javascript" src="reaction.js"></script>
+	</head>
+	
+	
+
+<body>
+<div class = "intro left">
+	<div class = "centered">
+	<img class = "logo" src = "biglogo.svg" alt = "logo">
+	</div>
+</div>
+<div class = "intro right">
+	<div class = "centered">
+		
+		<p> 
+			If you are taking the test as part of our study, please choose the option that describes the test you are now taking. If 
+			you are not taking the test as part of our study, select Take Well Rested. 
+		</p>
+		
+		<button type = "button" id = "moveOn"> Take Well Rested Test</button>
+		<button type = "button" id = "moveOnTired"> Take Fatigued Test</button>
+
+</div>
+</div>
+<div class = "page dis" id = "disclaimer">
+	<h1>
+	<img src = "disclaimer1.svg" alt = "logo">
+
+	</h1>
+	<p id = "disText">
+	The following code has been developed by students and researchers of the Freshman Research Initiative DIY Diagnostics Stream at the University of Texas at Austin. 
+	This application is strictly for entertainment purposes and should not be considered a product or a medical diagnostic tool. 
+	Any user of this application does so at their own risk. 
+	Members of FRI, DIY Diagnostics, and the University of Texas at Austin are not liable for anything relating to this application or its code.</br></br>
+		<input type="checkbox" id="myCheck" onclick="agreed()">
+		 I have read the disclaimer 
+		<button type = "button" id = "moveOn1" disabled> Continue</button>
+	
+	</p>
+	
+
+</div> 
+<div class = "page dis" id = "instructions">
+	<h1>
+	<img src = "instructions1.svg" alt = "logo">
+	</h1>
+	<p id = "insText">
+	Press the button to begin. 
+	Once the button is pressed, a series of 20 orange circles will appear in random locations on your screen. 
+	Click on each circle as soon as you see them appear. 
+	The test will automatically end after the 20 rounds. </br></br>
+
+	<button type = "button" id = "beginTest" onclick= "myFunction()">Begin Test</button>
+	</p>
+</div>
+ 
+
+
+
+<div class="page" id="two">
+	<div id = "box"> </div>
+</div>
+<div class="page" id="three">
+	<form name="chalder" id = "chalder">
+<div class = "surveyPage">
+	<div class = "last">
+	
+  	 <div class="form-row">
+    		<div class="form-group col-md-6">
+      			<label for="name">Your Name</label>
+      			<input type="text" class="form-control" id="name" name = "name" placeholder="Name" required>
+   	 	</div>
+   		 <div class="form-group col-md-6">
+			 <label for = "test">Your time in seconds</label>
+      			<input type="text" class="form-control" id="test" name = "test" value = "" readonly>
+    		</div>
+  	</div>
+	<div class = "form-row">
+  			<div class = "form-group col-md-4">
+	  			<label for="sleep">How many hours of sleep have you gotten in the past 24 hours?</label>
+  				<input type="text" class = "form-control" id="sleep" name="sleep(hours)" required>
+  			</div>
+  			<div class = "form-group col-md-4">
+	 			<label for="sleep2">On average, how many hours of sleep do you get every night?</label>
+  				<input type = "text" class = "form-control" id = "sleep2" name = "avgSleep(hours)" required>
+  			</div>
+			<div class="form-group col-md-2">
+				<label for = "refreshed">Do you currently feel refreshed and awake?</label>
+ 	 				<select id="refreshed" class = "form-control" name="refreshed" required>
+		 				<option value = "">Choose...</option>
+    						<option value="Yes">Yes</option>
+    						<option value="No">No</option>
+		 
+    					</select>
+ 
+			</div>
+	</div>
+  	<div class="form-group">
+    		<label for="caff">How much caffeine(mg) have you had in the past 8 hours? A regular cup of coffee has about 95 mg.</label>
+  		<input type="text" class = "form-control" id="caff" name="caff(mg)" required>
+ 	 </div>
+	<div class = "form-group">
+  			<label for="medication">Are you currently taking any medications or drugs which could impact the results of this sleep survey? </label>
+  			<select id="medication" class = "form-control" name="med" required>
+			<option value = "">Choose...</option>
+    			<option value="Yes, improve">yes, it could improve results</option>
+    			<option value="Yes, worsen">yes, it could worsen results</option>
+    			<option value="N/A, or won't impact results">N/A or it will not impact results</option>
+  			</select>
+	</div>
+	<div class = "form-row">
+  		<div class = "form-group col-md-4">
+	  			<label for="hoursSince">How many hours has it been since you last slept?</label>
+  				<input type="text" class = "form-control" id="hoursSince" name="hoursSince" required>
+  			</div>
+			<div class="form-group col-md-4">
+				<label for = "tiredLevel">Please rank your current feelings of tiredness and fatigue</label>
+ 	 				<select id="tiredLevel" class = "form-control" name="tiredLevel" required>
+		 				<option value = "">Choose...</option>
+    						<option value="1">1-Wide Awake</option>
+    						<option value="2">2</option>
+						<option value="3">3</option>
+    						<option value="4">4</option>
+						<option value="5">5-Neutral</option>
+    						<option value="6">6</option>
+						<option value="7">7</option>
+    						<option value="8">8</option>
+						<option value="9">9</option>
+    						<option value="10">10-Extremely Fatigued</option>
+    					</select>
+ 
+			</div>
+	</div>
+
+
+	</div>
+		
+	<!--<div class = "likert">
+		<h1>
+		1. Please rank your current feelings of tiredness and fatigue on a scale of 1 - 10
+		</h1>
+		<label><input type="radio" class = "scale" name="tiredLevel" value = "1" required/>1-Wide Awake</label>
+    		<label><input type="radio" class = "scale" name="tiredLevel" value = "2"/>2</label>
+    		<label><input type="radio" class = "scale" name="tiredLevel" value = "3"/>3</label>
+    		<label><input type="radio" class = "scale" name="tiredLevel" value = "4"/>4</label>
+    		<label><input type="radio" class = "scale" name="tiredLevel" value = "5"/>5-neutral</label>
+		<label><input type="radio" class = "scale" name="tiredLevel" value = "6"/>6</label>
+    		<label><input type="radio" class = "scale" name="tiredLevel" value = "7"/>7</label>
+    		<label><input type="radio" class = "scale" name="tiredLevel" value = "8"/>8</label>
+    		<label><input type="radio" class = "scale" name="tiredLevel" value = "9"/>9</label>
+    		<label><input type="radio" class = "scale" name="tiredLevel" value = "10"/>10 - Extremely Fatigued</label>
+	</div>
+		<div class = "likert">
+		<h1>
+		2. Do you have problems with tiredness? 
+		</h1>
+		<label><input type="radio" class = "scale" name="tiredProb" value = "0" required />Better Than Usual</label>
+    		<label><input type="radio" class = "scale" name="tiredProb" value = "1"/>Normal</label>
+    		<label><input type="radio" class = "scale" name="tiredProb" value = "2"/>Worse Than Usual</label>
+    		<label><input type="radio" class = "scale" name="tiredProb" value = "3"/>Much Worse Than Usual</label>
+		
+	</div>
+		<div class = "likert">
+		<h1>
+		3. Do you feel you are needing to rest more?
+		</h1>
+		<label><input type="radio" class = "scale" name="restMore" value = "0" required/>Better Than Usual</label>
+    		<label><input type="radio" class = "scale" name="restMore" value = "1"/>Normal</label>
+    		<label><input type="radio" class = "scale" name="restMore" value = "2"/>Worse Than Usual</label>
+    		<label><input type="radio" class = "scale" name="restMore" value = "3"/>Much Worse Than Usual</label>
+		
+	</div>
+		<div class = "likert">
+		<h1>
+		4. Do you feel sleepy or drowsy?
+		</h1>
+		<label><input type="radio" class = "scale" name="sleepyDrowsy" value = "0" required/>Better Than Usual</label>
+    		<label><input type="radio" class = "scale" name="sleepyDrowsy" value = "1"/>Normal</label>
+    		<label><input type="radio" class = "scale" name="sleepyDrowsy" value = "2"/>Worse Than Usual</label>
+    		<label><input type="radio" class = "scale" name="sleepyDrowsy" value = "3"/>Much Worse Than Usual</label>
+		
+	</div>
+		<div class = "likert">
+		<h1>
+		5. Do you have problems starting things?
+		</h1>
+		<label><input type="radio" class = "scale" name="startThings" value = "0" required/>Better Than Usual</label>
+    		<label><input type="radio" class = "scale" name="startThings" value = "1"/>Normal</label>
+    		<label><input type="radio" class = "scale" name="startThings" value = "2"/>Worse Than Usual</label>
+    		<label><input type="radio" class = "scale" name="startThings" value = "3"/>Much Worse Than Usual</label>
+		
+		</div>
+	<div class = "likert">
+		<h1>
+		6. Do you lack energy?
+		</h1>
+		<label><input type="radio" class = "scale" name="lackEnergy" value = "0" required/>Better Than Usual</label>
+    		<label><input type="radio" class = "scale" name="lackEnergy" value = "1"/>Normal</label>
+    		<label><input type="radio" class = "scale" name="lackEnergy" value = "2"/>Worse Than Usual</label>
+    		<label><input type="radio" class = "scale" name="lackEnergy" value = "3"/>Much Worse Than Usual</label>
+		
+	</div>
+		<div class = "likert">
+		<h1>
+		7. Do you have less strength in your muscles?
+		</h1>
+		<label><input type="radio" class = "scale" name="strength" value = "0" required/>Better Than Usual</label>
+    		<label><input type="radio" class = "scale" name="strength" value = "1"/>Normal</label>
+    		<label><input type="radio" class = "scale" name="strength" value = "2"/>Worse Than Usual</label>
+    		<label><input type="radio" class = "scale" name="strength" value = "3"/>Much Worse Than Usual</label>
+		
+	</div>
+		<div class = "likert">
+		<h1>
+		8. Do you feel weak?
+		</h1>
+		<label><input type="radio" class = "scale" name="weak" value = "0" required/>Better Than Usual</label>
+    		<label><input type="radio" class = "scale" name="weak" value = "1"/>Normal</label>
+    		<label><input type="radio" class = "scale" name="weak" value = "2"/>Worse Than Usual</label>
+    		<label><input type="radio" class = "scale" name="weak" value = "3"/>Much Worse Than Usual</label>
+		
+	</div>
+		<div class = "likert">
+		<h1>
+		9. Do you have difficulties concentrating?
+		</h1>
+		<label><input type="radio" class = "scale" name="concentrate" value = "0" required/>Better Than Usual</label>
+    		<label><input type="radio" class = "scale" name="concentrate" value = "1"/>Normal</label>
+    		<label><input type="radio" class = "scale" name="concentrate" value = "2"/>Worse Than Usual</label>
+    		<label><input type="radio" class = "scale" name="concentrate" value = "3"/>Much Worse Than Usual</label>
+		
+	</div>
+	<div class = "likert">
+		<h1>
+		10. Do you make slips of the tongue when speaking?
+		</h1>
+		<label><input type="radio" class = "scale" name="tongueSlip" value = "0" required />Better Than Usual</label>
+    		<label><input type="radio" class = "scale" name="tongueSlip" value = "1"/>Normal</label>
+    		<label><input type="radio" class = "scale" name="tongueSlip" value = "2"/>Worse Than Usual</label>
+    		<label><input type="radio" class = "scale" name="tongueSlip" value = "3"/>Much Worse Than Usual</label>
+		
+		
+	</div>
+		<div class = "likert">
+		<h1>
+		11. Do you find it more difficult to find the right word?
+		</h1>
+		<label><input type="radio" class = "scale" name="rightWord" value = "0" required/>Better Than Usual</label>
+    		<label><input type="radio" class = "scale" name="rightWord" value = "1"/>Normal</label>
+    		<label><input type="radio" class = "scale" name="rightWord" value = "2"/>Worse Than Usual</label>
+    		<label><input type="radio" class = "scale" name="rightWord" value = "3"/>Much Worse Than Usual</label>
+		
+	</div>
+	<div class = "likert">
+		<h1>
+		12. How is your memory?
+		</h1>
+		<label><input type="radio" class = "scale" name="memory" value = "0" required />Better Than Usual</label>
+    		<label><input type="radio" class = "scale" name="memory" value = "1"/>Normal</label>
+    		<label><input type="radio" class = "scale" name="memory" value = "2"/>Worse Than Usual</label>
+    		<label><input type="radio" class = "scale" name="memory" value = "3"/>Much Worse Than Usual</label>
+		
+	</div>
+	  <label><input type="text" class = "total" name="totalScore" id ="totalScore" value = "" style = "display:none" readonly required/></label>-->
+	<div>
+      	<button class="sub"  id = "submit">
+    		<span>Submit</span>
+    	</div>
+	</form>
+	
+	
+</div>	
+</div>
+
+<div class = "page feedback" id = "results">
+	<h1>
+		Feedback
+	</h1>
+	<form name = "feedback">
+	<textarea class = "review" name = "review" placeholder="Leave a comment..."></textarea>
+	<div>
+	<button class="sub" type = "submit" id = "submit2">
+    		<span>Submit</span>
+	</div>
+	</form>
+	
+  			
+ 
+</div>
+<div class = "page" id = "thanks">
+	<p>
+		Thank You!
+	</p>
+	</div>
+ </body>
+
+
+
+</html>
