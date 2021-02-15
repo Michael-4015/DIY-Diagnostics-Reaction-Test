@@ -73,7 +73,7 @@
 
 
 <div class="page" id="two">
-	<div id = "box" onclick = "updateTime()"> </div>
+	<div id = "box" onclick = "()"> </div>
 </div>
 <div class="page" id="three">
 	<form name="chalder" id = "chalder">
@@ -182,6 +182,39 @@
 	</div>
 <script type = "text/javascript" src="reaction.js"></script>
  </body>
+<script>
+	var clickedTime; 
+  var createdTime;
+  var reactionTime; 
+		
+  function makeBox() {
+     var time=Math.random();
+     time=time*3000;		
+     setTimeout(setBox, time); 		
+  }
+	
+  function clickCircle() {
+     numTimes++;
+     clickedTime=Date.now();			
+     reactionTime=(clickedTime-createdTime)/1000;
+     times.push(reactionTime);
+     avgTime = avgTime + reactionTime;   
+     box.style.display="none";			
+     
+  }
+			
+  box.onclick=function() {
+     if (numTimes == (numTests - 1)) {
+	 clickCircle();
+	 location.assign("#three");
+	 avgTime = avgTime / numTests;
+	 document.getElementById("test").value = avgTime;
+     } else {
+        clickCircle();
+	makeBox();
+     }
+  }
+	</script>
 
 
 
