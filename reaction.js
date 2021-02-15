@@ -2,17 +2,20 @@
   var scriptURL = 'https://script.google.com/macros/s/AKfycbwTyhITsooZVhWcQbtJ5lwWLw6CW1uwuNouV5Pw4SkZQKPdXGHj/exec'
   const form = document.forms['chalder']
   
-  document.getElementById("moveOn").onclick = function() {
-	  scriptURL = 'https://script.google.com/macros/s/AKfycbwTyhITsooZVhWcQbtJ5lwWLw6CW1uwuNouV5Pw4SkZQKPdXGHj/exec';
-	  location.assign("#disclaimer");
+  
+  function restTest() {
+    scriptURL = 'https://script.google.com/macros/s/AKfycbwTyhITsooZVhWcQbtJ5lwWLw6CW1uwuNouV5Pw4SkZQKPdXGHj/exec';
+    location.assign("#disclaimer");
+
   }
-document.getElementById("moveOnTired").onclick = function() {
-	  scriptURL = 'https://script.google.com/macros/s/AKfycbyeayo8NqtebfrjEeaR_GeGUHBWfKbSGydaO7L9fWzxpcgxIFec/exec';
-	  location.assign("#disclaimer");
+  function fatigueTest() {
+    scriptURL = 'https://script.google.com/macros/s/AKfycbyeayo8NqtebfrjEeaR_GeGUHBWfKbSGydaO7L9fWzxpcgxIFec/exec';
+    location.assign("#disclaimer");
   }
 
-  document.getElementById("moveOn1").onclick = function() {
-	  location.assign("#instructions");
+  function toInstructions() {
+    location.assign("#instructions");
+
   }
 	
   
@@ -22,7 +25,7 @@ document.getElementById("moveOnTired").onclick = function() {
 	  form.addEventListener('submit', e => {
     		e.preventDefault()
     		fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      		.then(response => console.log('yay', response))
+      		.then(response => console.log('Success', response))
       		.catch(error => console.error('Error!', error.message))
   	})
   }
