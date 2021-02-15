@@ -42,7 +42,7 @@
   var numTests = 20; 	
   var numTimes = 0;
   var avgTime = 0;	
-  var box = document.getElementById("box");
+  
 	
   
   
@@ -74,8 +74,9 @@
      time=time*3000;		
      setTimeout(setBox, time); 		
   }
-	
+  var box;
   function clickCircle() {
+     box = document.getElementById("box");
      numTimes++;
      clickedTime=Date.now();			
      reactionTime=(clickedTime-createdTime)/1000;
